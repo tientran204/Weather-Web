@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 420px;
+  padding-bottom: 20px;
+  border-radius: 18px;
+  background: #000011; 
+  box-shadow: 0 10px 40px rgba(24, 23, 23, 0.5);
+  color: #fff; /* >>> Toàn bộ chữ chuyển màu trắng */
+}
+
+.search-bar {
+  width: 85%;
+  margin: 25px auto 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #ddd;
+}
+
+.search-bar input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.search-bar i {
+  position: absolute;
+  right: 15px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-bar i:hover {
+  transform: scale(1.15);
+}
+/* Search box */
+.search-box {
+  width: 80%;
+  margin: 30px auto 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px 8px 8px 32px; /* chừa chỗ cho icon bên trái */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+#search-input::placeholder {
+  color: #888;
+}
+
+/* Info section */
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  color: #fff; /* đảm bảo chữ trắng */
+}
+
+.city-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.weather-state {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 15px 0;
+}
+
+.temperture {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 1;
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.temperture::after {
+  content: '°C';
+  position: absolute;
+  font-size: 24px;
+  top: 10px;
+  right: -35px;
+  color: #fff;
+}
+
+/* Additional info */
+.additional-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff; /* toàn bộ text trắng */
+}
+
+.additional-section .row {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional-section .item {
+  flex: 1;
+  color: #fff;
+}
+
+.app-header {
+  width: 100%;
+  padding: 15px 20px 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.app-header .time-icon {
+  font-size: 26px;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ======= THEME BAN NGÀY ======= */
+.day-theme {
+  background: linear-gradient(180deg, #a8d6ff, #ffffff);
+  color: #000 !important;
+}
+
+.day-theme .city-name,
+.day-theme .weather-state,
+.day-theme .temperture,
+.day-theme .additional-section,
+.day-theme .label,
+.day-theme .value {
+  color: #000 !important;
+}
+
+.day-theme .time-icon {
+  color: #ffbf00 !important;
+}
+
+/* ======= THEME BAN ĐÊM ======= */
+.night-theme {
+  background: linear-gradient(180deg, #000011, #0a0a2a);
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.night-theme .city-name,
+.night-theme .weather-state,
+.night-theme .temperture,
+.night-theme .additional-section,
+.night-theme .label,
+.night-theme .value {
+  color: #fff !important;
+}
+
+.night-theme .time-icon {
+  color: #fff !important;
+}
+
+/* Sao lung linh */
+.night-theme::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+     radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+     radial-gradient(2px 2px at 70% 20%, #fff, transparent),
+     radial-gradient(2px 2px at 40% 80%, #fff, transparent),
+     radial-gradient(2px 2px at 80% 60%, #fff, transparent),
+     radial-gradient(2px 2px at 55% 10%, #fff, transparent);
+  opacity: 0.7;
+}
+
+.recent-search-box {
+  width: 85%;
+  margin: 5px auto;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.recent-item {
+  padding: 5px 10px;
+  margin: 3px 0;
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recent-item:hover {
+  background: rgba(255,255,255,0.2);
+}
+

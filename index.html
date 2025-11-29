@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather_app</title>
+  <script src="js/all.min.js"></script>
+  <script src="js/moment.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+
+    <!-- ====== APP HEADER ====== -->
+    <div class="app-header">
+      <i class="fa-solid fa-sun time-icon"></i>
+      <h2 class="app-title">Weather App</h2>
+    </div>
+
+    <div class="main-section">
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Tìm kiếm thành phố...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Weather info -->
+      <div class="info-wrapper">
+        <p class="city-name">Ho Chi Minh</p>
+        <p class="weather-state">may thưa</p>
+        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+        <p class="temperture"> </p>
+      </div>
+    </div>
+
+    <!-- Additional section -->
+    <div class="additional-section">
+      <div class="row">
+        <div class="item">
+          <div class="label">MT Mọc</div>
+          <div class="value sunrise">6:16</div>
+        </div>
+        <div class="item">
+          <div class="label">MT Lặn</div>
+          <div class="value sunset">17:57</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item">
+          <div class="label">Độ ẩm</div>
+          <div class="value"><span class="humidity">73</span>%</div>
+        </div>
+        <div class="item">
+          <div class="label">Gió</div>
+          <div class="value"><span class="wind-speed">5.5</span> km/h</div>
+        </div>
+      </div>
+    </div>
+
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
