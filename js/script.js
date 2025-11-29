@@ -55,7 +55,7 @@ function fetchWeather(city) {
 function updateThemeByCity(data) {
   const container = document.querySelector('.container');
 
-  const current = data.dt;           // Thời gian hiện tại của thành phố (UNIX)
+  const current = data.dt;           
   const sunriseTime = data.sys.sunrise;
   const sunsetTime = data.sys.sunset;
 
@@ -97,13 +97,10 @@ function saveRecentSearch(city) {
 
     if (!city) return;
 
-    // Xóa nếu đã tồn tại để thêm lên đầu danh sách
     recentSearches = recentSearches.filter(item => item.toLowerCase() !== city.toLowerCase());
 
-    // Thêm lên đầu
     recentSearches.unshift(city);
 
-    // Giới hạn 5 hoặc 10 mục
     if (recentSearches.length > 5) {
         recentSearches.pop();
     }

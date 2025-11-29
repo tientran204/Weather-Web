@@ -18,7 +18,7 @@ body {
   border-radius: 18px;
   background: #000011; 
   box-shadow: 0 10px 40px rgba(24, 23, 23, 0.5);
-  color: #fff; /* >>> Toàn bộ chữ chuyển màu trắng */
+  color: #fff; 
 }
 
 .search-bar {
@@ -82,7 +82,7 @@ body {
 
 #search-input {
   width: 100%;
-  padding: 8px 8px 8px 32px; /* chừa chỗ cho icon bên trái */
+  padding: 8px 8px 8px 32px; 
   background: transparent;
   border: none;
   outline: none;
@@ -94,13 +94,12 @@ body {
   color: #888;
 }
 
-/* Info section */
 .info-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 30px;
-  color: #fff; /* đảm bảo chữ trắng */
+  color: #fff; 
 }
 
 .city-name {
@@ -139,7 +138,6 @@ body {
   color: #fff;
 }
 
-/* Additional info */
 .additional-section {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -179,7 +177,6 @@ body {
   font-weight: 600;
 }
 
-/* ======= THEME BAN NGÀY ======= */
 .day-theme {
   background: linear-gradient(180deg, #a8d6ff, #ffffff);
   color: #000 !important;
@@ -198,7 +195,6 @@ body {
   color: #ffbf00 !important;
 }
 
-/* ======= THEME BAN ĐÊM ======= */
 .night-theme {
   background: linear-gradient(180deg, #000011, #0a0a2a);
   color: #fff !important;
@@ -219,7 +215,6 @@ body {
   color: #fff !important;
 }
 
-/* Sao lung linh */
 .night-theme::before {
   content: "";
   position: absolute;
